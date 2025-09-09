@@ -1,0 +1,117 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333333;
+  padding: 10px;
+}
+
+/* Header (Hero) */
+.hero {
+  text-align: center;
+  padding: 30px;
+  background: #0e1c53;
+  color: white;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+.hero h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.hero button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  background: white;
+  color: #13196e;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Navigation (Flexbox) */
+.navbar {
+  background: #333333;
+  margin-bottom: 15px;
+}
+.nav-links {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+.nav-links li {
+  margin: 10px;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+.nav-links a:hover {
+  background: #4c4caf;
+}
+
+/* Main Layout (Grid) */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+
+/* Sidebar */
+.sidebar {
+  background: #a96b15;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Content */
+.content {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(98, 113, 99, 0.1);
+}
+
+/* Flexbox Cards */
+.card-container {
+  display: flex;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+.card {
+  flex: 1 1 30%;
+  background: #704e13;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background: #333333;
+  color: rgb(186, 62, 62);
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr; /* stack sidebar and content */
+  }
+  .card {
+    flex: 1 1 100%; /* stack cards */
+  }
+}
